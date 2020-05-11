@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import D3BarChart from './D3BarChart';
 
 class ChartWrapper extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      prevProps: this.props,
+    };
+  }
+
   componentDidMount() {
     this.setState({
       chart: new D3BarChart(
@@ -9,16 +17,16 @@ class ChartWrapper extends Component {
         this.props.data,
         this.props.callback
       ),
+      prevProps: this.props,
     });
   }
 
-  //ignore reacts normal updates and
-  //stop component from being rerendered
-  shouldComponentUpdate() {
-    return false;
+  //check if the props have changed from the previous render
+  shouldComponentUpdate(nextProps, state) {
+    return nextProps !== state.prevProps;
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     this.state.chart.update(nextProps);
   }
 
