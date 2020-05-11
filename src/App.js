@@ -45,21 +45,21 @@ class App extends Component {
 
         <div className="flex">
           <div>
-            <Header>Class Component using lifecycle</Header>
+            <Header>Class component using lifecycle</Header>
             <BarChart1
               data={this.state.data}
               callback={this.updateSelectedBarValue}
             />
           </div>
           <div>
-            <Header>Wrapping a d3.js file in a class component</Header>
+            <Header>Class component using lifecycle v2</Header>
             <BarChart2
               data={this.state.data}
               callback={this.updateSelectedBarValue}
             />
           </div>
           <div>
-            <Header>Functional Component using Hooks</Header>
+            <Header>Functional component using Hooks</Header>
             <BarChart3
               data={this.state.data}
               callback={this.updateSelectedBarValue}

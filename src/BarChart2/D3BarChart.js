@@ -28,7 +28,6 @@ class D3BarChart {
 
   update = ({ data }) => {
     //call when data is changed
-    console.log(data);
     const vis = this;
     const bars = vis.svgCanvas.selectAll('.bar').data(data);
 
