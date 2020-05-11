@@ -21,7 +21,6 @@ class BarChart extends Component {
       '1px solid black'
     );
     const bars = svgCanvas.selectAll('.bar').data(data);
-    console.log(bars);
 
     bars
       .enter()
@@ -36,8 +35,6 @@ class BarChart extends Component {
       .on('click', (datapoint, index) => {
         this.props.callback(datapoint, index);
       });
-
-    bars.exit().remove();
   }
 
   updateBarChart(newData) {
