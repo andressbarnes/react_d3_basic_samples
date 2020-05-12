@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { select } from 'd3';
 
-const BarChartHooks = (props) => {
+const BarChart3 = (props) => {
   const { data, callback } = props;
   const svgBarRef = useRef();
   const canvasHeight = 300;
@@ -47,4 +47,4 @@ const BarChartHooks = (props) => {
   );
 };
 
-export default BarChartHooks;
+export default BarChart3;

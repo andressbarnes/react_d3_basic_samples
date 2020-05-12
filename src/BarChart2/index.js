@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import D3BarChart from './D3BarChart';
 
-class ChartWrapper extends Component {
+class BarChart2 extends Component {
   componentDidMount() {
     this.setState({
       chart: new D3BarChart(
@@ -26,4 +26,4 @@ class ChartWrapper extends Component {
   }
 }
 
-export default ChartWrapper;
+export default BarChart2;
