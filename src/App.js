@@ -45,21 +45,21 @@ class App extends Component {
 
         <div className="flex">
           <div>
-            <Header>Class component using lifecycle</Header>
+            <Header>Example 1: Class component using lifecycle</Header>
             <BarChart1
               data={this.state.data}
               callback={this.updateSelectedBarValue}
             />
           </div>
           <div>
-            <Header>Class component using lifecycle v2</Header>
+            <Header>Example 2: Class component using lifecycle v2</Header>
             <BarChart2
               data={this.state.data}
               callback={this.updateSelectedBarValue}
             />
           </div>
           <div>
-            <Header>Functional component using Hooks</Header>
+            <Header>Example 3: Functional component using Hooks</Header>
             <BarChart3
               data={this.state.data}
               callback={this.updateSelectedBarValue}
